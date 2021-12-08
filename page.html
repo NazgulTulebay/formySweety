@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>$(document).ready(function(){
+
+  $('.fa-bars').click(function(){
+    $(this).toggleClass('fa-times');
+    $('.navbar').toggleClass('nav-toggle');
+  });
+
+  $(window).on('load scroll',function(){
+
+    $('.fa-bars').removeClass('fa-times');
+    $('.navbar').removeClass('nav-toggle');
+
+    if($(window).scrollTop() > 30){
+      $('header').addClass('header-active');
+    }else{
+      $('header').removeClass('header-active');
+    }
+
+    $('section').each(function(){
+      var id = $(this).attr('id');
+      var height = $(this).height();
+      var offset = $(this).offset().top - 200;
+      var top = $(window).scrollTop();
+      if(top >= offset && top < offset + height){
+        $('.navbar ul li a').removeClass('active');
+        $('.navbar').find('[data-scroll="' + id + '"]').addClass('active');
+      }
+    });
+
+  });
+
+
+});
+    </script>
+
+
+</head>
+<body>
+<header>
+  
+
+<a href="#" class="logo">Elindi Arala <span>.</span></a>
+
+<nav class="navbar">
+    <ul>
+        <li><a data-scroll="home" href="#home" class="active">Basty bet</a></li>
+        <li><a data-scroll="feature" href="#feature">Sayahat locatcyasy</a></li>
+        <li><a data-scroll="about" href="#about">Biz zhaily</a></li>
+        <li><a data-scroll="gallery" href="#gallery">Galereyamyz</a></li>
+        <li><a data-scroll="review" href="#review">Kompania qyzmetkerleri</a></li>
+        <li><a data-scroll="contact" href="#contact">Habarlas</a></li>
+    </ul>
+</nav>
+
+<div class="fas fa-bars"></div>
+
+</header>
+
+<div class="container">
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="https://www.worldmap1.com/map/kazakhstan/Kazakhstan%20Earth%20Map.jpg"  style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="https://avtoradio.kz/wp-content/uploads/2021/02/321-2.jpg" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="https://atameken.kz/ru/imagecache/news/crop_41-870x436_1454315600.jpg"  style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Aldyngy</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Kelesi</span>
+    </a>
+  </div>
+</div>
+
+<section class="home" id="home">
+<div class="content">
+    <h1>100 ret estigennen  <br> 1 ret kor!)</h1>
+    <p>Oz elimizdin turizimin birge damytaiyk)</p>
+</div>
+<div class="form-container">
+    <form action="">
+
+        <h3>Sayahattau  lokaciandy tanda</h3>
+
+        <span>Lokatsia</span>
+        <input type="text" placeholder="bargynyz keletyn zherdy zhazynyz">
+
+        <span>adam sany</span>
+        <input type="number" placeholder="adam sanyn engiziniz">
+
+        <span>baru uaqyty</span>
+        <input type="date">
+
+        <span>qaitu uaqyty</span>
+        <input type="date">
+
+        <input type="submit" value=" izdeu">
+
+    </form>
+</div>
+</section>
+<section class="feature" id="feature">
+<h1 class="heading"><span>U</span>synylatyn <span>O</span>ryndar</h1>
+<div class="card-container">
+
+    <div class="card">
+        <span class="discount">-60%</span>
+        <img src="https://ticketon.kz/files/media/8426u52887_tur-na-kolsay-kayndy24.jpg" alt="kolsay">
+        <div class="content">
+            <h3 class="title">Kölsai</h3>
+            <p>Almaty oblysy Kegen audany jerınde ornalasqan.
+Joğarğy Kölsai teñız deñgeiınen 3000 m-ge juyq, Orta Kölsai (Qaiyñdy) 2600 m jäne Tömengı Kölsai 2130 m biıktıkte ornalasqan. Tömengı Kölsaidyñ su aidyny basqalaryna qarağanda ülken. Kölsai kölderınıñ tabiğaty äsem tau şatqalymen jalğasady.</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <a href="#"><button class="btn">Tolyq malimet</button></a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://turkistanzaman.kz/wp-content/uploads/2021/05/IMG-20210331-WA0141.jpg" alt="turkestan">
+        <div class="content">
+            <h3 class="title">Turkistan</h3>
+            <p>Eurazia kındıgınde ornalasqan, Ūly Jıbek jolynyñ darhan dalasyna ainalğan ölke de erteden qala soğyldy, mädeni oşaqtar salyndy. Ğajaiyby syrğa toly özen-kölder men tau-tastar, ormandar men şöleiıtter masivı tarihi kezeñderdıñ kuäsı boldy. Myñjyldyq örkeniet toğysy bar şejırelı qalalar talai soğysty bastan ötkızdı. Qazaq handyğynyñ, Qypşaq ūlysynyñ, Türık qağanatynyñ astanasy bolğan qalalar da jeterlık.
+</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+            </div>
+            <a href="#"><button class="btn">Tolyq malimet</button></a>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="discount">-30%</span>
+        <img src="https://ruh.kz/data/old_media/upload/iblock/f6b/Burabay-men-Zerendi-_ashan-ashylady_-_-RUH.kz.jpg" alt="Borovoe">
+        <div class="content">
+            <h3 class="title">Burabai</h3>
+            <p>Barlyq älem kartalarynda, bükıl jer betınde Burabai özıne tän tabiğatymen erekşelenedı. Onyñ Qazaqstannyñ Şveisariasy nemese Qazaqstannyñ asyly dep ataluy beker emes. Ūly da qūdırettı Alla Tağala osyndai kışkentai ğana jerde orman, köl, taulardy köz tūndyrarlyq ädemılıkpen jaratqan. Kez-kelgen jandy erekşe sūlu tabiğatymen baurap alatyn būl ölke jaily añyz-äñgımeler, mälımetter öte köp. </p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <a href="#"><button class="btn">Tolyq malimet</button></a>
+        </div>
+    </div>
+</div>
+
+</section>
+<section id="about" class="about">
+<h1 class="heading"><span>B</span>iz <span>Z</span>haily</h1>
+<div class="row">
+    <div class="image">
+        <img src="https://static.tildacdn.com/tild3932-6366-4132-b433-343364343236/dfgfgggggggggggg.jpg" alt="туризм">
+    </div>
+
+    <div class="content">
+        <h3>Bızdı tañdaudyñ 5 sebebı:</h3>
+        <p>
+1)Qoljetımdı bağada qysqa merzımdı saiahat;<br>
+2)Tarihi derekter men qyzyqty lokasialar;<br>
+3)Oiyndar men şoi bağadarlamalar;<br>
+4)Tağam jäne qonaq üimen qamatamasyz etu ;<br>
+5)Ağylşyn,qytai,türık tılderın jetık meñgergen gidter;.</p>
+        <a href="#"><button class="btn btn1">tolyğyraq</button></a>
+        <a href="#"><button class="btn">bastau</button></a>
+    </div>
+</div>
+</section>
+
+
+<section id="gallery" class="gallery">
+
+<h1 class="heading"><span>F</span>otokorme</h1>
+
+<div class="box-container">
+
+    <div class="box">
+        <img src="https://static.tildacdn.com/tild6437-3165-4333-b065-366563393930/noroot.jpg" alt="">
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-share"></a>
+            <a href="#" class="fas fa-search"></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="https://s12.stc.all.kpcdn.net/share/i/12/11437162/wr-960.jpg" alt="">
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-share"></a>
+            <a href="#" class="fas fa-search"></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="https://rus.azattyq-ruhy.kz/cache/imagine/main_page_full/uploads/news/2021/05/14/609e22b379b2b054787455.jpg" alt="">
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-share"></a>
+            <a href="#" class="fas fa-search"></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="https://www.1c-rating.kz/press/imgs/2017-05-31-rafting/DSC01453.JPG" alt="">
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-share"></a>
+            <a href="#" class="fas fa-search"></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="https://sputnik.kz/images/07e5/04/14/16841890.jpg" alt="">
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-share"></a>
+            <a href="#" class="fas fa-search"></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="http://news.arsu.kz/wp-content/uploads/2019/07/0c3a9256-1024x683.jpg" alt="">
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-share"></a>
+            <a href="#" class="fas fa-search"></a>
+        </div>
+    </div>
+
+</div>
+
+</section>
+<section id="review" class="review">
+
+<h1 class="heading"><span>K</span>ompania qyzmetkerleri</h1>
+<div class="box-container">
+
+    <div class="box">
+        <div class="image">
+            <img src="https://www.archive.inform.kz/fotoarticles/20150922181052.jpg" alt="">
+        </div>
+        <div class="content">
+            <h3>Asqar</h3>
+            <p>Gid,co-founder</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="image">
+            <img src="https://dostop.ru/wp-content/uploads/2019/09/ajya-shalkar-v-klipe-medina.jpg" alt="">
+        </div>
+        <div class="content">
+            <h3>Aya</h3>
+            <p>satu mamany, audarmashy</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="image">
+            <img src="https://ztb.kz/media/imperavi/598d56d56d119.jpg" alt="">
+        </div>
+        <div class="content">
+            <h3>Abai</h3>
+            <p>uiymdastyrushy</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</section>
+<section id="contact" class="contact">
+
+<h1 class="heading"><span>B</span>ailanys  <span>U</span>shin</h1>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d93018.44490182227!2d76.88028159999999!3d43.2340992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skz!4v1637722558226!5m2!1sru!2skz" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<div class="row">
+<div class="contact-info">
+    <div class="box">
+        <h3> <i class="fas fa-home"></i>Mekenzhaiymyz </h3>
+        <p>Qazaqstan <br>
+        Almaty<br>
+        Tole bi-Rozabakieva qiylysy</p>
+    </div>
+
+    <div class="box">
+        <h3> <i class="fas fa-envelope"></i> elektrondy poshta </h3>
+        <p>nazilandn@gmail.com</p>
+    </div>
+
+    <div class="box">
+        <h3> <i class="fas fa-phone"></i> bailanys nomerimiz</h3>
+        <p>+747 771 1784 </p>
+    </div>
+
+</div>
+
+<div class="contact-form-container">
+
+    <form action="">
+
+        <h3>Pikir qaldyr)</h3>
+
+        <div class="inputBox">
+            <input type="text" placeholder="Tolyq aty-zhoniniz ">
+            <input type="email" placeholder="e-mail">
+        </div>
+
+        <textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea>
+
+        <input type="submit" value="message">
+
+    </form>
+</div>
+
+</div>
+
+</section>
+
+<section class="newsletter">
+
+<h1>15% zhenildik algyn kelse tirkel</h1>
+<form action="">
+    <input type="email" placeholder="emailindi engiz">
+    <input type="submit" value="tirkelu">
+</form>
+
+</section>
+
+<section class="footer">
+
+<h1 class="credit">Founder <span>Nazgul Tilebay</span> | barlyq quqyqtar qorgalgan</h1>
+
+<div class="icons">
+    <a href="#" class="fab fa-facebook-f"></a>
+    <a href="#" class="fab fa-twitter"></a>
+    <a href="#" class="fab fa-instagram"></a>
+</div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
